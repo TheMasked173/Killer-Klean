@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+        
 }
 
 body {
@@ -42,7 +47,7 @@ body {
 .hero {
     height: 90vh;
     background: linear-gradient(rgba(29,52,122,0.8), rgba(29,52,122,0.8)),
-    url('images/hero.jpg') center/cover;
+    url('images/logo-image.png') center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,34 +85,86 @@ section {
 
 .about {
     background: #F5FAFC;
+    size: 30px;
 }
 
-/* SERVICES */
+/* SERVICES SECTION WRAPPER */
+.services {
+    background: #ffffff;
+    padding: 100px 50px;
+}
+
+.services h2 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: #1D347A;
+    letter-spacing: 0.5px;
+}
+
+.services p {
+    max-width: 650px;
+    margin: 0 auto 50px auto;
+    color: #35508f;
+    font-size: 1.1rem;
+}
+
+/* GRID */
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
+/* LINK WRAPPER */
 .service-link {
     text-decoration: none;
-    color: inherit;
 }
 
+/* CARD */
 .card {
-    background: #F5FAFC;
-    border: 2px solid #A9D5E2;
-    border-radius: 12px;
-    padding: 30px;
-    transition: 0.3s;
+    background: linear-gradient(145deg, #F5FAFC, #ffffff);
+    border: 1px solid rgba(29, 52, 122, 0.15);
+    border-radius: 16px;
+    padding: 35px 25px;
+    text-align: left;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
 }
 
-.card:hover {
-    transform: translateY(-8px);
+/* subtle top accent bar */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #A9D5E2;
 }
 
+/* TITLE */
 .card h3 {
-    margin-bottom: 15px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #1D347A;
+}
+
+/* TEXT */
+.card p {
+    font-size: 0.95rem;
+    color: #35508f;
+    line-height: 1.5;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(29, 52, 122, 0.15);
+    border-color: rgba(29, 52, 122, 0.3);
 }
 
 /* GALLERY */
@@ -121,6 +178,88 @@ section {
     width: 100%;
     border-radius: 12px;
 }
+.dual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.dual img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.carousel-wrapper {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 25px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 20px;
+}
+
+.slide {
+    min-width: 360px;
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    scroll-snap-align: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    border: 2px solid #A9D5E2;
+}
+
+.slide h3 {
+    margin-bottom: 15px;
+    color: #1D347A;
+}
+
+/* FULL IMAGE */
+.slide img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    height: 260px;
+}
+
+/* SIDE BY SIDE */
+.dual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.dual img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ARROWS */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #1D347A;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-btn.left { left: -20px; }
+.carousel-btn.right { right: -20px; }
 
 .cta {
     background: linear-gradient(135deg, #A9D5E2, #d8eef5);

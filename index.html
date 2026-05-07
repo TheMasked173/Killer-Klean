@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Killer Klean Exterior Cleaning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -89,17 +92,49 @@
     </div>
 </section>
 
-<section id="gallery" class="gallery">
-    <h2>Before & After Results</h2>
+<section id="gallery" class="results">
+    <h2>Recent Transformations</h2>
 
-    <div class="gallery-grid">
-        <img src="images/concrete-before-after.jpg" alt="">
-        <img src="images/stone-before-after.jpg" alt="">
-        <img src="images/extra-before-after.jpg" alt="">
-        <img src="images/window-before-1.jpg" alt="">
-        <img src="images/window-after-1.jpg" alt="">
-        <img src="images/window-before-2.jpg" alt="">
-        <img src="images/window-after-2.jpg" alt="">
+    <div class="carousel-wrapper">
+
+        <button class="carousel-btn left" onclick="scrollCarousel(-1)">‹</button>
+
+        <div class="carousel" id="carousel">
+
+            <!-- FULL BEFORE/AFTER IN ONE IMAGE -->
+            <div class="slide">
+                <h3>Window Cleaning</h3>
+                <img src="images/before-full-window.png" alt="Before and after window cleaning">
+            </div>
+
+            <div class="slide">
+                <h3>Concrete Cleaning</h3>
+                <img src="images/concreat.png" alt="Before and after concrete cleaning">
+            </div>
+
+            <div class="slide">
+                <h3>Wall Restoration</h3>
+                <img src="images/wall-b-a.png" alt="Before and after wall cleaning">
+            </div>
+
+            <div class="slide">
+                <h3>Window Exterior</h3>
+                <img src="images/windowBA.png" alt="Before and after window cleaning">
+            </div>
+
+            <!-- SPLIT PANEL (single job, two halves) -->
+            <div class="slide">
+                <h3>Detail Window Cleaning</h3>
+                <div class="dual">
+                    <img src="images/singleA.png" alt="Window panel A">
+                    <img src="images/singleB.png" alt="Window panel B">
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-btn right" onclick="scrollCarousel(1)">›</button>
+
     </div>
 </section>
 
