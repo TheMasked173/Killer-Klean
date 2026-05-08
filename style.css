@@ -362,3 +362,66 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+
+    /* GENERAL SPACING */
+    section {
+        padding: 60px 20px;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        font-size: 0.9rem;
+    }
+
+    /* HERO */
+    .hero-overlay h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .hero-overlay p {
+        font-size: 1rem;
+    }
+
+    /* SERVICES GRID */
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 25px 20px;
+    }
+
+    /* CAROUSEL */
+    .slide {
+        min-width: 85%;
+    }
+
+    .carousel {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    /* CTA */
+    .cta h2 {
+        font-size: 2rem;
+    }
+
+    .cta p {
+        font-size: 1rem;
+    }
+
+    /* BUTTONS */
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
